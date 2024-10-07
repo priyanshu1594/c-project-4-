@@ -1,15 +1,19 @@
 #include <stdio.h>
 
 int main() {
-    int k = 11;
+    char str[100];
+    int i;
 
-    for (int i = 1; i <= 4; i++) {
-        for (int j = 1; j <= i; j++) {
-            printf("%d ", k);
-            k++;
+    printf("Enter any string: ");
+    gets(str);
+
+    for(i = 0; str[i] != '\0'; i++) {
+        if(str[i] >= 'A' && str[i] <= 'Z') {
+            str[i] = str[i] + 32;
         }
-        printf("\n");
     }
+
+    printf("Lowercase string: %s\n", str);
 
     return 0;
 }

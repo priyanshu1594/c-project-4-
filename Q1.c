@@ -1,13 +1,19 @@
-#include<stdio.h>
-int main()
-{
-    int i,j;
-    for(i=41;i<=45;i++)
-    {
-        for(j=41;j<=i;j++)
-        {
-            printf("%d ",j);
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i;
+
+    printf("Enter any string: ");
+    gets(str);
+
+    for(i = 0; str[i] != '\0'; i++) {
+        if(str[i] >= 'a' && str[i] <= 'z') {
+            str[i] = str[i] - 32;
         }
-        printf("\n");
     }
+
+    printf("Uppercase string: %s\n", str);
+
+    return 0;
 }
